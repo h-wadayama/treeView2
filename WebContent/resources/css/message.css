@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+.alert-info {
+  color: #2d7091;
+  border-color: rgba(45, 112, 145, 0.3);
+}
+.alert-warn {
+  color: #e28327;
+  border-color: rgba(226, 131, 39, 0.3);
+}
+.alert-error {
+  color: #d85030;
+  border-color: rgba(216, 80, 48, 0.3);
+}

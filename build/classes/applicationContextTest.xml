@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="DocFindDaoIF" class="app.co.jp.dao.DocFindDaoImple" />
+	<bean id="DocServiceIF" class="app.co.jp.service.DocService" />
+	<bean id="DocInsUpdDaoIF" class="app.co.jp.dao.DocInsUpdDaoImpl"/>
+	<bean id="CommonUtil" class="app.co.jp.util.CommonUtil"/>
+	<bean id="IdDaoIF" class="app.co.jp.dao.IdDaoImple"/>
+	<bean id="IdServiceIF" class="app.co.jp.service.IdService"/>
+	<bean id="FileDaoIF" class="app.co.jp.dao.FileDao"/>
+
+    <bean id="jndi" class="app.co.jp.util.DBConnect" >
+      <property name="dataSourceJndiName" >
+         <value>java:comp/env/jdbc/user13</value>
+      </property>
+   </bean>
+
+
+
+	<bean id="messageSource"
+	    class="org.springframework.context.support.ResourceBundleMessageSource"> <!-- (1) -->
+	    <property name="basenames"> <!-- (2) -->
+	        <list>
+	            <value>application-messages</value>
+	        </list>
+	    </property>
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+
+
+</beans>
